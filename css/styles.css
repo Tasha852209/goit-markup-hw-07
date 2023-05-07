@@ -698,7 +698,7 @@ body {
 */
 .backdrop {
   position: fixed;
-  z-index: 100;
+  z-index: 999;
   top: 0;
   left: 0;
   width: 100%;
@@ -714,13 +714,20 @@ body {
 }
 .modal {
   position: absolute;
-  width: 408px;
+  width: 395px;
   height: 584px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 72px 24px 24px 24px;
+  padding: 72px 16px 24px 16px;
   background-color: var(--color-modal-background);
+}
+@media only screen and (min-width: 768px) {
+  .modal {
+    width: 408px;
+    height: 584px;
+    padding: 72px 24px 24px 24px;
+  }
 }
 .modal-close-btn {
   position: absolute;
