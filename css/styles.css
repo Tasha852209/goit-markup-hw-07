@@ -43,7 +43,7 @@ body {
 .container {
   /* Phone styles */
   min-width: 320px;
-  max-width: 396px;
+  max-width: 428px;
   padding-left: 16px;
   padding-right: 16px;
   margin-left: auto;
@@ -219,27 +219,48 @@ body {
     ),
     url("../images/hero/people-office.jpg");
   background-size: cover;
-  padding-top: 188px;
-  padding-bottom: 188px;
+  padding-top: 112px;
+  padding-bottom: 112px;
   max-width: 1440px;
   background-position: center;
   background-repeat: no-repeat;
   margin-right: auto;
   margin-left: auto;
 }
+@media only screen and (min-width: 768px) {
+  .hero-section {
+    max-width: 768px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .hero-section {
+    padding-top: 188px;
+    padding-bottom: 188px;
+    max-width: 1440px;
+  }
+}
 .hero {
   text-align: center;
 }
 .title {
   margin: 0 auto;
-  max-width: 496px;
+  max-width: 320px;
   font-family: "Roboto";
   font-weight: 700;
-  font-size: 56px;
-  line-height: 1.07;
+  font-size: 36px;
+  line-height: 1.11;
   letter-spacing: 0.02em;
+  text-transform: capitalize;
   color: var(--color-white-background);
   text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .title {
+    max-width: 496px;
+    text-transform: none;
+    font-size: 56px;
+    line-height: 1.07;
+  }
 }
 .title-btn {
   min-width: 169px;
