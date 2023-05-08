@@ -561,6 +561,7 @@ body {
   }
   .customers-list {
     gap: 24px;
+    flex-wrap: nowrap;
   }
 }
 .customers-link:hover,
@@ -575,11 +576,39 @@ body {
   |============================
   | FOOTER
   |============================
-*/
+  */
 .footer {
   background-color: var(--color-dark);
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+.footer-sections {
+  display: flex;
+  align-items: baseline;
+  gap: 72px 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+.mobile-footer-logo {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+@media only screen and (min-width: 768px) {
+  .footer-sections {
+    justify-content: left;
+    text-align: left;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .footer-sections {
+    flex-wrap: nowrap;
+    gap: 120px;
+  }
 }
 .logo-footer {
   color: var(--color-light);
@@ -608,11 +637,6 @@ body {
   color: #ffffff;
   margin-bottom: 16px;
 }
-.footer-sections {
-  display: flex;
-  align-items: baseline;
-  gap: 120px;
-}
 .footer-social-link:hover,
 .footer-social-link:focus {
   background-color: var(--color-success);
@@ -628,13 +652,18 @@ body {
 }
 .subscribe-footer-form {
   display: flex;
+  gap: 16px;
+  flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .subscribe-footer-form-input {
+  display: block;
   padding: 8px 16px;
   margin-right: 24px;
-  width: 264px;
+  width: 398px;
+  margin: 0 auto;
   height: 40px;
   font-size: 12px;
   line-height: 2;
@@ -643,6 +672,23 @@ body {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: transparent;
+}
+@media only screen and (max-width: 397px) {
+  .subscribe-footer-form-input {
+    width: 264px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .subscribe-footer-form-input {
+    display: inline-block;
+    width: 264px;
+    margin-right: 24px;
+  }
+  .subscribe-footer-form {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
 }
 .subscribe-footer-form-input::placeholder {
   font-weight: 400;
