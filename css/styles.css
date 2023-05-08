@@ -296,41 +296,85 @@ body {
   |============================
 */
 .feature-section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+@media only screen and (min-width: 1158px) {
+  .feature-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
 }
 .features {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  gap: 72px;
+  justify-content: center;
 }
 .feature-content {
-  flex-basis: calc((100% - 72px) / 4);
+  flex-basis: calc((100% - 72px) / 1);
 }
 .feature-subject {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
   letter-spacing: 0.02em;
+  text-align: center;
   color: var(--color-dark);
   margin-bottom: 8px;
 }
 .feature-text {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--color-text);
 }
 .icon-item {
-  display: flex;
-  background-color: var(--color-light);
-  justify-content: center;
-  align-items: center;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  border-radius: 4px;
-  margin-bottom: 8px;
+  display: none;
 }
+@media only screen and (min-width: 768px) {
+  .features {
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 72px;
+    column-gap: 24px;
+  }
+  .feature-content {
+    flex-basis: calc((100% - 72px) / 2);
+  }
+  .feature-subject {
+    text-align: left;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .features {
+    gap: 24px;
+  }
+  .feature-content {
+    flex-basis: calc((100% - 72px) / 4);
+  }
+  .feature-subject {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  .feature-text {
+    font-weight: 400;
+  }
+  .icon-item {
+    display: flex;
+    background-color: var(--color-light);
+    justify-content: center;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+  }
+}
+
 /**
   |============================
   | PRODUCTS
