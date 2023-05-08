@@ -381,26 +381,33 @@ body {
   |============================
 */
 .products-section {
-  padding-bottom: 120px;
+  display: none;
 }
-.products-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 40px;
-  letter-spacing: 0.02em;
-  text-transform: capitalize;
-  color: var(--color-dark);
-  line-height: 1.11;
-  text-align: center;
-  margin-bottom: 72px;
+@media only screen and (min-width: 1158px) {
+  .products-section {
+    display: block;
+    padding-bottom: 120px;
+  }
+  .products-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: var(--color-dark);
+    line-height: 1.11;
+    text-align: center;
+    margin-bottom: 72px;
+  }
+  .products-list {
+    display: flex;
+    gap: 24px;
+  }
+  .products-item {
+    flex-basis: calc((100%-24px * 2) / 3);
+  }
 }
-.products-list {
-  display: flex;
-  gap: 24px;
-}
-.products-item {
-  flex-basis: calc((100%-24px * 2) / 3);
-}
+
 /**
   |============================
   | TEAM
