@@ -752,11 +752,7 @@ body {
   border-radius: 4px;
   background-color: transparent;
 }
-/* @media only screen and (max-width: 397px) {
-  .subscribe-footer-form-input {
-    width: 264px;
-  }
-} */
+
 @media only screen and (min-width: 768px) {
   .subscribe-footer {
     width: auto;
@@ -947,6 +943,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 72px 16px 24px 16px;
+  overflow-y: auto;
   background-color: var(--color-modal-background);
 }
 
@@ -961,6 +958,8 @@ body {
     width: 408px;
     height: 584px;
     padding: 72px 24px 24px 24px;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 .modal-close-btn {
@@ -1006,6 +1005,7 @@ body {
   | MODAL FORM
   |============================
 */
+
 .modal-form-field {
   display: block;
   margin-bottom: 4px;
