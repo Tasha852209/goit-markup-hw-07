@@ -954,7 +954,8 @@ body {
   background-color: var(--color-modal-background);
 }
 
-@media screen and (max-height: 583px) and (orientation: landscape) {
+@media screen and (max-height: 583px) and (orientation: landscape),
+  (max-height: 583px) {
   .backdrop {
     overflow: auto;
   }
@@ -1198,7 +1199,7 @@ body {
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
 }
-@media screen and (orientation: landscape) {
+@media screen and (orientation: landscape), (max-height: 596px) {
   .menu-container {
     overflow: auto;
   }
@@ -1252,6 +1253,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  margin-top: 48px;
   margin-bottom: 48px;
 }
 .mobile-phone-link {
