@@ -50,13 +50,13 @@ body {
   padding-right: 16px;
   margin-left: auto;
   margin-right: auto;
-  /* outline: 2px solid red;
-  outline-offset: -2px; */
+  outline: 2px solid red;
+  outline-offset: -2px;
 }
 /* Tablet styles */
 @media only screen and (min-width: 768px) {
   .container {
-    max-width: 736px;
+    max-width: 768px;
   }
 }
 /* Desktop styles */
@@ -669,7 +669,7 @@ body {
 }
 @media only screen and (min-width: 768px) {
   .footer-sections {
-    padding-left: 94px;
+    padding-left: 108px;
     text-align: left;
     justify-content: left;
   }
@@ -821,15 +821,40 @@ body {
   |============================
 */
 .portfolio-section {
-  padding-top: 96px;
-  padding-bottom: 120px;
+  padding-top: 48px;
+  padding-bottom: 48px;
 }
+
+@media only screen and (min-width: 768px) {
+  .portfolio-section {
+    padding-top: 64px;
+    padding-bottom: 96px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .portfolio-section {
+    padding-top: 100px;
+    padding-bottom: 120px;
+  }
+}
+
 .portfolio-buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
-  justify-content: center;
-  margin-bottom: 72px;
+  gap: 16px 24px;
+  justify-content: left;
+  margin-bottom: 48px;
+}
+@media only screen and (min-width: 768px) {
+  .portfolio-buttons {
+    justify-content: center;
+    margin-bottom: 64px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .portfolio-buttons {
+    margin-bottom: 72px;
+  }
 }
 .portfolio-btn {
   background-color: var(--color-light);
@@ -858,15 +883,16 @@ body {
 }
 .portfolio-cards {
   display: flex;
-  column-gap: 24px;
-  row-gap: 48px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 48px 24px;
   flex-wrap: wrap;
 }
 .link-card {
   display: block;
   transition: box-shadow var(--transition-dur-and-func);
   background-color: var(--color-white-background);
-  flex-basis: calc((100%-24px * 2) / 3);
+  flex-basis: 396px;
 }
 .link-card:hover,
 .link-card:focus {
@@ -921,6 +947,37 @@ body {
 .link-card:focus .overlay {
   transform: translate(0, 0);
 }
+
+.link-card-img {
+}
+@media only screen and (min-width: 768px) {
+  .portfolio-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 72px 24px;
+    flex-wrap: wrap;
+  }
+  .link-card-img {
+    width: 356px;
+    height: 300px;
+  }
+  .link-card {
+    flex-basis: 356px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .portfolio-cards {
+    gap: 48px 24px;
+  }
+  .link-card-img {
+    width: 360px;
+  }
+  .link-card {
+    flex-basis: calc((100%-24px * 2) / 3);
+  }
+}
+.link-card-img 
 /**
   |============================
   | MODAL WINDOW
